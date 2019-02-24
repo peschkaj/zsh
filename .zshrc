@@ -1,5 +1,5 @@
 # get rid of fzf-tmux
-export LANG=en_GB.UTF-8
+export LANG=en_US.UTF-8
 setopt TRANSIENT_RPROMPT
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 export ZSH_AUTOSUGGEST_USE_ASYNC=1
@@ -44,7 +44,7 @@ unset _zplugin_available
 unsetopt AUTO_CD
 
 # Set up prompt
-prompt sorin
+#prompt sorin
 zstyle ':prezto:module:editor:info:keymap:primary' format '%B%F{31}%%%f%b'
 zstyle ':prezto:module:editor:info:keymap:alternate' format '%B%F{1}$%f%b'
 
@@ -221,3 +221,10 @@ unset _zcompdump
 # kick off a recompile of .zsh and the compdump file in the background, if needed
 ( autoload -U zrecompile && zrecompile -p ~/.zshrc -- ~/.zcompdump > /dev/null ) &!
 export ZSH_AUTOSUGGEST_USE_ASYNC=1
+
+
+## External Configuration
+### ~/.zshrc.local
+if [[ -f ~/.zshrc.local ]]; then
+    . ~/.zshrc.local
+fi
